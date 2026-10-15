@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = "https://adimkhhwakaoaxamuvlv.supabase.co"   // juste l’URL du projet
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."   // ta clé anon
+// ⚠️ On utilise les variables d'environnement
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseKey)

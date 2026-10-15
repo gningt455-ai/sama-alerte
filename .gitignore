@@ -7,16 +7,25 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules et builds
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Fichiers d'environnement (ne jamais pousser les secrets)
+.env
+.env.local
+.env.development
+.env.production
+
+# Dossiers éditeurs
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+
+# Fichiers spécifiques Windows / IDE
 *.suo
 *.ntvs*
 *.njsproj
