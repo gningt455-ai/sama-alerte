@@ -27,7 +27,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Media queries doivent être séparées */
+/* Media queries */
 @media (max-width: 1024px) {
   :root {
     font-size: 16px;
@@ -57,6 +57,7 @@
 /* Styles généraux */
 body {
   margin: 0;
+  /* ⚠️ Tailwind v4 : @apply doit rester dans un fichier CSS géré par Vite */
   @apply bg-gray-100 font-sans;
 }
 
@@ -124,7 +125,5 @@ code {
   background: var(--code-bg);
 }
 
-/* Directives Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Directives Tailwind v4 */
+@import "tailwindcss";
